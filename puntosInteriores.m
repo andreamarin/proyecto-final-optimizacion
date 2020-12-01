@@ -19,16 +19,10 @@ function [x, fx, k, normFk] = puntosInteriores(...
 %              gam0 := (opcional) valor inicial de gamma.
 %
 % variables de salida:
-%                x := punto donde se encontro el minimo
-%               fx := (opcional) valor de la funcion objetivo en x.
-%           output := (opcional) estructura que muestra varios
-%                     parametros:
-%                       - iteraciones
-%                       - stepsize
-%                       - CNPO
-%                       - constviolation
-%                       - mLagrange
-%                       - trayectoria
+%               x       := punto donde se encontro el minimo
+%               fx      := valor de la funcion objetivo en x
+%               k       := numero de iteraciones
+%               normFk  := CNPO
 %
 if nargin < 4
     SIGMA = 0.3;
@@ -38,7 +32,7 @@ end
 
 gamk = 1;
 tol = 1e-6;
-MaxIter = 100;
+MaxIter = 75;
 p = length(feval(fineq,x0));
 n = length(x0);
 

@@ -1,7 +1,7 @@
 function [g] = restricciones(W)
 n = length(W)/2 + 1;
 k = 1;
-g = zeros(5*(n-1)+ n*(n-1)/2 + (n-1),1);
+g = zeros(5*(n-1)+ n*(n-1)/2,1);
 
 % restricción para tener el diámetro es menor a 1
 % r_i^2 + r_j^2 - 2*r_i*r_j*cos(theta_j - theta_i) <= 1
