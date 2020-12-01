@@ -1,24 +1,21 @@
-function [p] = perimetro(W)
+function [a] = area(W)
 
 n = length(W)/2 + 1;
 
 rk = 0; 
 thetak = 0;
-p = 0;
+a = 0;
 
 for k = 1:(n-1)
     rk1 = W(k);
     thetak1 = W(n-1+k);
     
-    d = sqrt(rk^2 + rk1^2 - 2*rk*rk1*cos(thetak-thetak1));
-    p = p + d;
+    a = a + rk*rk1*sin(thetak1 - thetak);
     
     rk = rk1;
     thetak = thetak1;
 end
 
-p = p + rk;
-
-p = -p;
+a = -(1/2)*a;
 
 end

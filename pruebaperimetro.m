@@ -6,6 +6,7 @@
  W = [r theta];
  
  p = perimetro(W)
+ a = area(W)
  
  
  W1 = transf(x,y);
