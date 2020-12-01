@@ -1,7 +1,7 @@
 function [x, fx, k, normFk] = puntosInteriores(...
     fobj,fineq, x0, SIGM)
 %              METODO DE PUNTOS INTERIORES
-%
+% 
 % Se programa el metodo de puntos interiores para el problema de
 % minimizacion:
 %
@@ -24,6 +24,9 @@ function [x, fx, k, normFk] = puntosInteriores(...
 %               k       := numero de iteraciones
 %               normFk  := CNPO
 %
+
+% Programa compartido por el profesor.
+
 if nargin < 4
     SIGMA = 0.3;
 else
