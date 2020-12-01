@@ -1,26 +1,32 @@
-% Optimización Numérica
+% Optimizaciï¿½n Numï¿½rica
 % ITAM
 % Proyecto final
-% Andrea Marín Alarcón (158999), Andrea Pérez Vega (154467) 
+% Andrea Marï¿½n Alarcï¿½n (158999), Andrea Pï¿½rez Vega (154467) 
 % y Luis Felipe Landa Elizarralde (158228)
 
-% Gráficas y resultados finales para distintos (x0,y0).
+% Graficas y resultados finales para distintos (x0,y0).
+
+% deshabilitar warnings
+warning('off','all');
+
+options = optimset('Display','off',...
+    'Algorithm','interior-point');
 
 % Poligono 4 lados
 x0 = [0.75, 0.75, 0];
 y0 = [0, 0.75, 0.75];
 figure(1)
-graficaResultado(x0,y0, 'Polígono 4 lados')
+graficaResultado(x0,y0, 'Polï¿½gono 4 lados')
 
 % Poligono convexo
 x0 = [2,2,0,-2,-2];
 y0 = [1,3,6,3,1];
 figure(2)
-graficaResultado(x0,y0, 'Polígono convexo')
+graficaResultado(x0,y0, 'Polï¿½gono convexo')
 
 % Poligono concavo
 x0 = [2,2,0,-2,-2];
 y0 = [1,3,2,3,1];
 figure(3)
-graficaResultado(x0,y0, 'Polígono concavo')
+graficaResultado(x0,y0, 'Polï¿½gono concavo')
 
