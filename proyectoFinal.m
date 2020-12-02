@@ -1,7 +1,7 @@
-% Optimizaciï¿½n Numï¿½rica
+% Optimizacion Numerica
 % ITAM
 % Proyecto final
-% Andrea Marï¿½n Alarcï¿½n (158999), Andrea Pï¿½rez Vega (154467) 
+% Andrea Marin Alarcon (158999), Andrea Perez Vega (154467) 
 % y Luis Felipe Landa Elizarralde (158228)
 
 % Graficas y resultados finales para distintos (x0,y0).
@@ -16,17 +16,25 @@ options = optimset('Display','off',...
 x0 = [0.75, 0.75, 0];
 y0 = [0, 0.75, 0.75];
 figure(1)
-graficaResultado(x0,y0, 'Polï¿½gono 4 lados')
+graficaResultado(x0,y0, 'Polígono 4 lados')
 
 % Poligono convexo
 x0 = [2,2,0,-2,-2];
 y0 = [1,3,6,3,1];
 figure(2)
-graficaResultado(x0,y0, 'Polï¿½gono convexo')
+graficaResultado(x0,y0, 'Polígono convexo')
 
 % Poligono concavo
 x0 = [2,2,0,-2,-2];
 y0 = [1,3,2,3,1];
 figure(3)
-graficaResultado(x0,y0, 'Polï¿½gono concavo')
+graficaResultado(x0,y0, 'Polígono concavo')
+
+% polígono de 8 lados
+n = 8;
+theta  = linspace(0,pi,n-1);
+r = ones(1, n-1).*0.2;
+[x0, y0] = pol2cart(theta, r);
+figure(4)
+graficaResultado(x0, y0, 'Polígono de 8 lados')
 
